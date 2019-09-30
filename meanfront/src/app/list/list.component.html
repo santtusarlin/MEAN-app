@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="d-flex mt-3 mb-3">List of movies</div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Movie</th>
+        <th>Year</th>
+        <th>Length</th>
+        <th>Rating</th>
+        <th>Genre</th>
+        <th>Synopsis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--*ngFor on looppidirektiivi-->
+      <tr *ngFor="let m of movies">
+        <td><img src="{{m.imgurl}}"/></td>
+        <td (click)="showReview(m)">{{m.name}}</td>
+        <td>{{m.year}}</td>
+        <td>{{m.length}}</td>
+        <td>{{m.rating}}</td>
+        <td>{{m.genre}}</td>
+        <td>{{m.review}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

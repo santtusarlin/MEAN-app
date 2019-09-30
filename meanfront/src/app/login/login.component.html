@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="d-flex mt-3 mb-3">Login</div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" name="username" ngModel />
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" name="password" ngModel /><br />
+        <button type="submit" class="btn btn-light">Log In</button>
+    </div>
+    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+</form>
+</div>

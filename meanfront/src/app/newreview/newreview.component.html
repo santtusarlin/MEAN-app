@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="d-flex mt-3 mb-3">Submit a new movie</div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="imgurl">img_url;</label>
+      <input type="text" class="form-control" placeholder="https://www..." name="imgurl" [(ngModel)]="imgurl" ngModel />
+      <label for="name">Movie's name:</label>
+      <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="name" ngModel />
+      <label for="year">Year:</label>
+      <input type="text" class="form-control" placeholder="Year" name="year" [(ngModel)]="year" ngModel />
+      <label for="length">Length:</label>
+      <input type="text" class="form-control" placeholder="0h 00min" name="length" [(ngModel)]="length" ngModel />
+      <label for="rating">Rating:</label>
+      <input type="text" class="form-control" placeholder="0.0" name="rating" [(ngModel)]="rating" ngModel />
+      <label for="genre">Genre:</label>
+      <input type="text" class="form-control" placeholder="Action, Drama, Fantasy etc." name="genre" [(ngModel)]="genre"
+        ngModel />
+      <label for="review">Synopsis:</label>
+      <textarea rows="6" type="text" class="form-control" placeholder="Write your synopsis..." name="review" [(ngModel)]="review"
+        ngModel>
+                  </textarea>
+      <input type="hidden" name="id" [(ngModel)]="id" ngModel />
+    </div>
+    <!--<button (click)="add(m)" class="btn btn-light">Submit</button>-->
+    <button type="submit" class="btn btn-light">Submit</button>
+  </form>
+</div>
